@@ -1,0 +1,62 @@
+{
+  "artifact_name": "agent-ready-repo-pack",
+  "version": "0.1.0",
+  "artifact_type": "capability_pack",
+  "tier": "public_free",
+  "status": "experimental",
+  "summary": "Templates, evals, safety checks, and receipts for preparing repositories for AI coding agents.",
+  "target_users": [
+    "developers using AI coding agents",
+    "repo maintainers",
+    "AI workflow builders",
+    "MCP tool and skill authors"
+  ],
+  "supported_agent_surfaces": [
+    "Claude Code",
+    "OpenAI Codex",
+    "GitHub Copilot",
+    "Cursor",
+    "MCP-adjacent coding agents"
+  ],
+  "included_paths": [
+    "README.md",
+    "templates/AGENTS.md",
+    "templates/CLAUDE.md",
+    "templates/CODEX.md",
+    "templates/repo-map.md",
+    "templates/review-gate.md",
+    "evals/coding-agent-readiness-rubric.md",
+    "evals/before-after-run-receipt.md",
+    "safety/permission-risk-ladder.md",
+    "safety/tool-use-checklist.md",
+    "examples/tiny-python-repo-example/README.md",
+    "receipts/sample-agent-run.jsonl",
+    "checksums.sha256"
+  ],
+  "expected_inputs": [
+    "repository path or URL",
+    "bounded coding task",
+    "test command",
+    "review criteria",
+    "allowed tool/command policy"
+  ],
+  "expected_outputs": [
+    "agent-ready instruction files",
+    "repo map",
+    "review gate",
+    "readiness score",
+    "run receipt"
+  ],
+  "expected_permissions": [
+    "repository read",
+    "optional local file write",
+    "optional test command execution"
+  ],
+  "known_limitations": [
+    "Templates must be adapted to the target repository.",
+    "This pack does not guarantee safe or correct agent behavior.",
+    "This pack does not replace human code review.",
+    "Checksums verify file identity, not behavioral safety."
+  ],
+  "license": "MIT or repository-level license if specified"
+}
